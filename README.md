@@ -17,4 +17,5 @@ Some external Python libraries may be necessary to execute the notebooks without
 * `biopyhton`
 * `pandas`
 * `numpy`
-* `stats`
+* `matplotlib`
+* `scipy`
