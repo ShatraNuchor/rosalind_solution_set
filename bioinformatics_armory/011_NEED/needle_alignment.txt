@@ -1,0 +1,214 @@
+########################################
+# Program: needle
+# Rundate: Fri 10 Mar 2023 16:32:51
+# Commandline: needle
+#    -asequence asis:attctttcctgtttccctctctgccctccctctctctccccaccatcttctctctttatttgaaaccaatggcaatggattcttgaggtaagaaccagcgctcccttcctcttgccgcttcatacagaaagaaacagacgagaagcatcgaacctatcagcttagcggccaaacacaattccagtcacagagagcaacagaggaggacatgatggagccgaaggaaaagatgggaaggggaaagatagagataaagaggatagaaaataccacgaacaggcaagtcaccttttgtaagcgccgcaatggccttctcaaaaaagcctacgagctctctgtcctctgcgacgccgaggtcgccctcgtcatcttctccacccgtggccgcctctacgagtatgccaataacagtgtaaagggcactatcgagcgttacaagaaagcaagcagtgataactccagttctggatcaatatctgcaacaaatgcgcagtattatcttcaagaagcctcaaaacttcgacagcaaatcacaagcttacagaattcaaacagacatctgatgggtgaggctctaagcaccatgaacctaagggacttgaagcagctggaatcaaggctagaaaaaggcatcaacaaaataagaaccaaaaagaatgagttgctatatgctgagatagagtacatgcaaaaaagggaggtggaacttcaaaacgacaacatgtacctccgaaataagatagctgataatgaaagatcacagcagcagcaacacatgaacatgatgccatcaacaagcactgattatgaaatgatgcctccctttgactccagaaacttcctgcaagtgaatctaatggatcccaacagtcactactctctccagcagcaaactgcccttcaattaggctaggtagcattactgctgcattcctggagctgcatgaagaaggagaagcttcctccatggaaacttcattatgccaactattatagttggtgtgaattgggaatagcaggtttttctccactacagttcatgtgatgactctatcctatgctaactattatacgtcattatgctatatatgttggacacattgagaactttgttgtatattaatcaaactctatgtttagtttgcatgtaaaaaaaaaaaaaaaaaaaaaa
+#    -bsequence asis:atggaagcctccgccggctcgtcgccaccgcactcccaagagaacccgccggagcacggtggcgacatgggaggggcccccgcggaggagatcggaggggaggcggcggatgatttcatgttcgctgaagacacgttcccctccctcccggacttcccttgcctttcgtcgccgtccagctccaccttctcgtccaactcctcgtcaaactcctccagcgcctacaccaacacggcaggaagagccggcggcgagccctccgagcctgcttcggccggagaagggtttgatgcgctcgatgacatcgaccagctcctcgacttcgcgtcgctttccatgccgtgggactccgagccgttcccgggggttagcatgatgctagagaacgccatgtcggcgccgccgcagccggtgggcgacggcatgagtgaagagaaagccgtgccggaagggaccacagggggagaggaggcctgcatggatgcgtcggagggggaggagctgccgcggttcttcatggagtggctcacgagcaaccgcgaaaacatctcggccgaggatctccgcgggatccgcctccgccgctccaccatcgaggccgccgccgcccggctcggcggcgggcgccagggcaccatgcagctgctcaagctcatcctcacctgggtgcagaaccaccacctccagaggaagcgcccgcgcgacgtgatggaggaggaggcgggcctgcacgtccagctccccagcccggtcgccaacccaccaggatacgagttccccgccggcggacaggacatggccgcgggcggcggcacatcttggatgccccaccagcaggcattcacgccgcctgctgcgtacggcggcgacgcggtgtacccgagcgcggcaggccaacagtactctttccaccagggccccagcacgagcagcgtggtcgtgaacagccaaccgttctccccgccgcctgtgggcgacatgcacggcgcgaacatggcctggccgcagcagtacgtgccgttcccaccgcctggggcttccacgggctcttaccctatgccgcagccgttctcccccggattcggcgggcagtacgccggcgccggcgctggccacctctcagtggccccccagcgcatggcaggcgtggaggcctcggcgaccaaggaggcccgcaagaagcgcatggcgagacagcggcgcctgtcctgcctgcagcagcagcgcagccagcagctgagcctgggccagatccaggcctccgtccacctgcaggagccgtcccctcggtccacgcactccggcccggtcacgccgtcagcaggcggctggggattctggtcgccgagcagccagcagcaggtccagaacccgctctccaagtccaattcatcaagggcgccgcctccctcgctggaagcggcggcggtggcgccacagacaaagcccgcgcctgctggtgctcggcaggacgacattcaccaccgcctcgcagcggcttcagataagcggcagggcgccaaggcggacaagaacctgcggttcctgctgcagaaggtgctgaagcagagcgacgtcgggagcctcggccgcatcgtgctccccaaagaagcggaggttcacctgccggagctgaagacgagggatggcatctccatccccatggaggacatcggaacgtcgcgcgtgtggaacatgcggtacaggttttggcccaacaacaagagcagaatgtatctgctggagaacacaggggaatttgttcgttccaacgagcttcaggagggggatttcatagtgatctactccgatgtcaagtcgggcaaatatctgatacggggcgtgaaggtaaggcccccgccggcgcaagagcaaggcagtggttccagcgggggaggcaagcacaggcccctctgtccagcaggtccagggagagccgcagccgccggtgctcctgaagacgccgtcgtcgacggggtcagcggcgcctgcaaggggaggtctccggaaggcgtgcggcgggttcggcagcagggagccggcgccatgagccagatggcggtgagcatc
+#    -stdout
+#    -auto
+#    -gapextend 1.0
+#    -endweight
+#    -endopen 10.0
+#    -endextend 1.0
+#    -outfile needle_alignment.txt
+# Align_format: srspair
+# Report_file: needle_alignment.txt
+########################################
+
+#=======================================
+#
+# Aligned_sequences: 2
+# 1: asis
+# 2: asis
+# Matrix: EDNAFULL
+# Gap_penalty: 10.0
+# Extend_penalty: 1.0
+#
+# Length: 2191
+# Identity:     780/2191 (35.6%)
+# Similarity:   780/2191 (35.6%)
+# Gaps:        1141/2191 (52.1%)
+# Score: 257.0
+# 
+#
+#=======================================
+
+asis               1 at-------tc---------------------------------------      4
+                     ||       ||                                       
+asis               1 atggaagcctccgccggctcgtcgccaccgcactcccaagagaacccgcc     50
+
+asis               4 --------------------------------------------------      4
+                                                                       
+asis              51 ggagcacggtggcgacatgggaggggcccccgcggaggagatcggagggg    100
+
+asis               5 -------------tttcctgtt-------------------tccctctct     22
+                                  ||||.||||                   ||||||.|.
+asis             101 aggcggcggatgatttcatgttcgctgaagacacgttcccctccctcccg    150
+
+asis              23 gccctccct---ctctc-------tcc----ccaccatct--------tc     50
+                     |.|.|||||   ||.||       |||    |||||.|||        ||
+asis             151 gacttcccttgcctttcgtcgccgtccagctccaccttctcgtccaactc    200
+
+asis              51 tctctttatttgaa----------------acca--atggcaatggattc     82
+                      |||.|.|    ||                ||||  |.||||        
+asis             201 -ctcgtca----aactcctccagcgcctacaccaacacggca--------    237
+
+asis              83 ttgaggtaagaacc-------agcgctcccttcct-ctt--gccgcttca    122
+                          |.||||.||       |||.||||...||| |||  ||||     
+asis             238 -----ggaagagccggcggcgagccctccgagcctgcttcggccg-----    277
+
+asis             123 tacagaa-----agaaacagacga-gaagcatcga--acct-atcagctt    163
+                       .||||     .||..|...||| ||  ||||||  |.|| .||..|||
+asis             278 --gagaagggtttgatgcgctcgatga--catcgaccagctcctcgactt    323
+
+asis             164 agcg--gccaaacacaattcca--------gtcacagag-----------    192
+                     .|||  ||        .|||||        |.|.|.|||           
+asis             324 cgcgtcgc--------tttccatgccgtgggactccgagccgttcccggg    365
+
+asis             193 ----agca-----acagaggaggacatgatggagccgaaggaaaagatgg    233
+                         ||||     ..||||.|.|.||||..||.||||..|.|...|.|||
+asis             366 ggttagcatgatgctagagaacgccatgtcggcgccgccgcagccggtgg    415
+
+asis             234 gaaggggaaaga-tagagataaagaggat---agaaaataccac------    273
+                     |....||.|.|| |..|||.||||..| |   .|||...|||||      
+asis             416 gcgacggcatgagtgaagagaaagccg-tgccggaagggaccacaggggg    464
+
+asis             274 -gaacaggcaagtcaccttttgtaagcgccgcaatg---------gcc--    311
+                      ||..||||..| ||     ||.|.|||.||.|..|         |||  
+asis             465 agaggaggcctg-ca-----tggatgcgtcggagggggaggagctgccgc    508
+
+asis             312 --ttct-------------------caa-----aaaa-------gcctac    328
+                       ||||                   |||     ||||       |||.|.
+asis             509 ggttcttcatggagtggctcacgagcaaccgcgaaaacatctcggccgag    558
+
+asis             329 gagctc-------tctgtcctctgcgacgc--------cgaggtcgcc--    361
+                     ||.|||       ||.| ||||  ||.|||        |||||.||||  
+asis             559 gatctccgcgggatccg-cctc--cgccgctccaccatcgaggccgccgc    605
+
+asis             362 -------ctcg------------------------------tca---tct    371
+                            ||||                              |||   ||.
+asis             606 cgcccggctcggcggcgggcgccagggcaccatgcagctgctcaagctca    655
+
+asis             372 tctccacccgtgg-----------ccgcctctacgagtatgc-------c    403
+                     ||..||||  |||           ||.||||.| |||.|.||       |
+asis             656 tcctcacc--tgggtgcagaaccaccacctcca-gaggaagcgcccgcgc    702
+
+asis             404 aa--taacagtgta-aagg-------gcactatcgagcgttacaag----    439
+                     .|  |.|..|.|.| .|||       |||| .||.||| |..|.||    
+asis             703 gacgtgatggaggaggaggcgggcctgcac-gtccagc-tccccagcccg    750
+
+asis             440 -----aaagcaagcagtgataactccagttc--------tggatca--at    474
+                          .||.|.|.||| ||||   |.|||||        .||| ||  |.
+asis             751 gtcgccaacccaccag-gata---cgagttccccgccggcgga-caggac    795
+
+asis             475 at------------ctgcaaca-----aatgc-------gcagtattatc    500
+                     ||            |.|| |||     .||||       ||||     .|
+asis             796 atggccgcgggcggcggc-acatcttggatgccccaccagcag-----gc    839
+
+asis             501 -ttcaagaagcct-------------------------------------    512
+                      ||||.|..||||                                     
+asis             840 attcacgccgcctgctgcgtacggcggcgacgcggtgtacccgagcgcgg    889
+
+asis             513 -----caaaa-----ctt--cgacag---caaatcacaagc---------    538
+                          |||.|     |||  |..|||   |..|.|||.|||         
+asis             890 caggccaacagtactctttccaccagggccccagcacgagcagcgtggtc    939
+
+asis             539 --ttacag--aa---ttcaaacagacatctgatgggtga-------ggct    574
+                       ..||||  ||   |||...|.|.|..||| ||||.||       |||.
+asis             940 gtgaacagccaaccgttctccccgccgcctg-tgggcgacatgcacggcg    988
+
+asis             575 ctaa------------gcacca----------------------------    584
+                     |.||            |||.||                            
+asis             989 cgaacatggcctggccgcagcagtacgtgccgttcccaccgcctggggct   1038
+
+asis             585 -----------tgaacctaag------------------ggactt-----    600
+                                |.|.||||.|                  ||| ||     
+asis            1039 tccacgggctcttaccctatgccgcagccgttctcccccgga-ttcggcg   1087
+
+asis             601 -gaagca-------------gctgg---------aat------------c    615
+                      |.||.|             |||||         |.|            |
+asis            1088 ggcagtacgccggcgccggcgctggccacctctcagtggccccccagcgc   1137
+
+asis             616 aaggc-----tagaaaaaggcatcaacaa--aataagaac--caaaaaga    656
+                     |.|||     |.|    ||||.||..|.|  ||..||..|  |||.||| 
+asis            1138 atggcaggcgtgg----aggcctcggcgaccaaggaggcccgcaagaag-   1182
+
+asis             657 atgagttgctatatgctgagatagag----------tacatgca-aaaaa    695
+                           .||   |||..||||.||.|          |.|.|||| .|..|
+asis            1183 ------cgc---atggcgagacagcggcgcctgtcctgcctgcagcagca   1223
+
+asis             696 g--------ggaggtggaactt----caaa---------acgacaacatg    724
+                     |        |.||.| ||.|.|    ||.|         .||.|.||.||
+asis            1224 gcgcagccagcagct-gagcctgggccagatccaggcctccgtccacctg   1272
+
+asis             725 ta----------cct---------------------------ccgaaata    737
+                     .|          |||                           |||..|..
+asis            1273 caggagccgtcccctcggtccacgcactccggcccggtcacgccgtcagc   1322
+
+asis             738 agatagct---gataatgaaagatcac--agcag-cagcaaca----cat    777
+                     ||...|||   |||..|    |.||.|  ||||| |||||.||    || 
+asis            1323 aggcggctggggattct----ggtcgccgagcagccagcagcaggtcca-   1367
+
+asis             778 gaacatgatgcc-atcaacaag--cactgatt-atgaa--atgatgcctc    821
+                     ||||      || .||..||||  ||   ||| ||.||  ..|..|||||
+asis            1368 gaac------ccgctctccaagtcca---attcatcaagggcgccgcctc   1408
+
+asis             822 cct-----------------ttgactccagaaac--------ttcctgca    846
+                     |||                 .||.|.|||.|.||        ..|||||.
+asis            1409 cctcgctggaagcggcggcggtggcgccacagacaaagcccgcgcctgct   1458
+
+asis             847 agtgaatctaatggatcccaacagtcactactctctc-cagcagc-----    890
+                     .||| .||....|||   |.|||.||||.||...||| ||||.||     
+asis            1459 ggtg-ctcggcagga---cgacattcaccaccgcctcgcagcggcttcag   1504
+
+asis             891 -----------------------------aaactgcccttc---------    902
+                                                  ||.||||..|||         
+asis            1505 ataagcggcagggcgccaaggcggacaagaacctgcggttcctgctgcag   1554
+
+asis             903 aa-----ttaggc---------taggtagcattactgctgcat-----tc    933
+                     ||     |.|.||         |.||.|||.|  |.||.||||     ||
+asis            1555 aaggtgctgaagcagagcgacgtcgggagcct--cggccgcatcgtgctc   1602
+
+asis             934 c---------tggag------ctgc-----atgaaga--aggagaag---    958
+                     |         .||||      ||||     .||||||  ||| ||.|   
+asis            1603 cccaaagaagcggaggttcacctgccggagctgaagacgagg-gatggca   1651
+
+asis             959 ----cttcctccatgga---------aacttc----------attatg--    983
+                         |.||| |||||||         |||.||          |..|||  
+asis            1652 tctccatcc-ccatggaggacatcggaacgtcgcgcgtgtggaacatgcg   1700
+
+asis             984 --------------ccaactattatagttg-gtgtgaat----tgg-gaa   1013
+                                   |||||.|..|.||..| .|||  ||    ||| |||
+asis            1701 gtacaggttttggcccaacaacaagagcagaatgt--atctgctggagaa   1748
+
+asis            1014 tagcagg-----tttttc--tcca-----ctacag---------ttcat-   1041
+                     .| ||||     ||.|||  ||||     ||.|||         ||||| 
+asis            1749 ca-caggggaatttgttcgttccaacgagcttcaggagggggatttcata   1797
+
+asis            1042 gtgatgactcta-tcctatgct----------aacta--ttatac--gtc   1076
+                     ||||    |||| |||.||| |          ||.||  |.||||  |.|
+asis            1798 gtga----tctactccgatg-tcaagtcgggcaaatatctgatacggggc   1842
+
+asis            1077 attatgcta----------------tata---------tgtt--------   1093
+                     .|.|.|.||                .|.|         ||.|        
+asis            1843 gtgaaggtaaggcccccgccggcgcaagagcaaggcagtggttccagcgg   1892
+
+asis            1094 -ggacacattgagaa-------ctttgt----------------------   1113
+                      |||..||   ||.|       ||.|||                      
+asis            1893 gggaggca---agcacaggcccctctgtccagcaggtccagggagagccg   1939
+
+asis            1114 ----------tgtatattaa-------------------tca--------   1126
+                               ||....|.||                   |||        
+asis            1940 cagccgccggtgctcctgaagacgccgtcgtcgacggggtcagcggcgcc   1989
+
+asis            1127 ---aa--------ctc---------tatgtttagtttg------------   1144
+                        ||        |||         |..|....|||.|            
+asis            1990 tgcaaggggaggtctccggaaggcgtgcggcgggttcggcagcagggagc   2039
+
+asis            1145 ------catgtaaaaaaaaaaaaaaaa--------aaaaaa   1171
+                           ||||          |...|.|        |..|..
+asis            2040 cggcgccatg----------agccagatggcggtgagcatc   2070
+
+
+#---------------------------------------
+#---------------------------------------
